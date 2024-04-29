@@ -1,0 +1,155 @@
+﻿@font-face {
+    font-family: 'quicksand-regular';
+    src: url('../lib/bootstrap/fonts/quicksand-regular.ttf') format('truetype');
+}
+
+
+body {
+    font-family: quicksand-regular;
+    background: rgb(136,163,237);
+    background: linear-gradient(0deg, rgba(136,163,237,0.9961497134670487) 0%, rgba(197,173,197,1) 100%);
+    color: white;
+}
+
+a{
+    color: black;
+}
+
+.container-section {
+    justify-content: center;
+    height: 700px;
+}
+
+.banner {
+    background-color: #e15832;
+    max-width: 900px;
+    border-radius: 5px;
+    box-shadow: 5px 10px 15px 2px rgb(255, 255, 255, 0.2);
+}
+
+.banner-leftSide {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0 0;
+}
+
+.h3-name {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+}
+
+.first-p {
+    font-size: 1.1rem;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url('../myphoto/try.png');
+    background-size: cover;
+}
+
+.banner-rigthSide {
+    flex: 2;
+    padding: 1rem 1rem;
+}
+
+.h3-hola {
+    font-size: 4rem;
+}
+
+h3, p {
+    margin-bottom: 10px;
+}
+
+.icons-container, .btns-container {
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    margin-top: 1rem;
+}
+
+
+.icono-banner {
+    font-size: 1.5rem;
+    color: rgb(246, 246, 246);
+}
+
+.btn-banner {
+    margin-top: .5rem;
+    font-size: 1.1rem;
+    font-family: quicksand-regular;
+    padding: 3px 15px;
+    background-color: rgb(246, 246, 246);
+    border: solid rgb(246, 246, 246);
+    transition: .2s;
+    cursor: pointer;
+    border-radius: 20px;
+    color: rgb(156, 156, 156);
+    box-shadow: 5px 5px 5px 1px rgb(0,0,0,0.2);
+}
+
+    .btn-banner:hover {
+        border: solid #05F2C7;
+        color: dimgray;
+    }
+
+.text {
+    line-height: 1.6rem;
+    margin-top: 2rem;
+}
+
+.section-logo{
+    width: 100%;
+    height: 300px;
+}
+
+#carouselExample{
+    border-radius: 5px;
+    
+}
+
+.carousel-inner img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    background-color: transparent;
+}
+
+/* Media queries*/
+@media (min-width: 676px) {
+    .container-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner {
+        display: flex;
+        padding: 0 1rem 1rem;
+        gap: 20px;
+        height: 400px;
+    }
+
+    .banner-leftSide{
+        text-align: center;
+    }
+
+    .h3-hola{
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 948px) {
+
+    .banner {
+        padding: 0;
+    }
+
+    .text {
+        width: 80%;
+    }
+}

@@ -1,0 +1,119 @@
+﻿@font-face {
+    font-family: 'quicksand-regular';
+    src: url('../public/fonts/quicksand-regular.ttf') format('truetype');
+}
+
+
+body{
+    font-family: quicksand-regular;
+}
+
+.container{
+    justify-content:center;
+    height: 700px;
+}
+
+.banner {
+    background-color: #f2f2f2;
+    max-width: 900px;
+    
+}
+
+.banner-leftSide {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0 0;
+    
+}
+
+.h3-name{
+    font-size: 1.5rem;
+}
+
+.first-p{
+    font-size: 1.1rem;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.banner-rigthSide {
+    flex: 2;
+    padding: 1rem 1rem;
+}
+
+.h3-hola{
+    font-size: 3.2rem;
+}
+
+h3, p {
+    margin-bottom: 10px;
+}
+
+.icons-container, .btns-container {
+    display:flex;
+    flex-direction: row;
+    gap: 13px;
+    margin-top: 1rem;
+}
+
+
+.icono-banner {
+    font-size: 1.5rem;
+}
+
+.btn-banner {
+    font-size: 1.1rem;
+    font-family: quicksand-regular;
+    padding: 5px 15px;
+    background-color: #B6F2BF;
+    border: solid #B6F2BF;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.btn-banner:hover {
+    border: solid #05F2C7;
+    color: dimgray;
+}
+
+.text{
+    line-height: 1.6rem;
+}
+
+/* Media queries*/
+@media (min-width: 676px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner {
+        display: flex;
+        padding: 0 1rem 1rem;
+        gap: 20px;
+        height: 400px;
+    }
+
+    .banner-rigthSide {
+        padding: 0;
+    }
+}
+
+@media (min-width: 948px){
+
+    .banner{
+        padding: 0;
+    }
+
+    .text{
+        width: 80%;
+    }
+}

@@ -1,0 +1,54 @@
+﻿/*La gran mayoría de los esilos de esta page son hechos directamente con clases de Bootstrap*/
+
+@font-face {
+    font-family: 'quicksand-regular';
+    src: url('../lib/bootstrap/fonts/quicksand-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'shadowsintolight-regular';
+    src: url('../lib/bootstrap/fonts/shadowsintolight-regular.ttf') format('truetype');
+}
+
+body{
+    font-family: quicksand-regular;
+}
+
+.foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url('../myphoto/try.png');
+    background-size: cover;
+}
+
+.name-portafolio {
+    font-weight: bold;
+    margin-bottom: .8em;
+    margin-top: .8em
+}
+
+.p-personalizado {
+    font-family: shadowsintolight-regular;
+    font-size: 1.2rem;
+}
+/* Media query para pantallas pequeñas (menos de 576px) */
+@media (max-width: 575.98px) {
+    .row-cols-1 > .col {
+        flex: 0 0 100%; /* Una tarjeta por fila en pantallas pequeñas */
+    }
+}
+
+/* Media query para pantallas medianas (576px - 991px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .row-cols-1 > .col {
+        flex: 0 0 100%; /* Una tarjeta por fila en pantallas medianas */
+    }
+}
+
+/* Media query para pantallas grandes (992px y superiores) */
+@media (min-width: 992px) {
+    .row-cols-1 > .col {
+        flex: 0 0 50%; /* Dos tarjetas por fila en pantallas grandes */
+    }
+}
