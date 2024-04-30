@@ -1,4 +1,4 @@
-﻿/*La gran mayoría de los esilos de esta page son hechos directamente con clases de Bootstrap*/
+﻿
 
 @font-face {
     font-family: 'quicksand-regular';
@@ -10,8 +10,10 @@
     src: url('../lib/bootstrap/fonts/shadowsintolight-regular.ttf') format('truetype');
 }
 
-body{
+body {
     font-family: quicksand-regular;
+    background: rgb(242, 237, 237);
+    padding-bottom: 4rem;
 }
 
 .foto {
@@ -20,6 +22,7 @@ body{
     border-radius: 50%;
     background-image: url('../myphoto/try.png');
     background-size: cover;
+    box-shadow: 5px 8px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 .name-portafolio {
@@ -30,25 +33,117 @@ body{
 
 .p-personalizado {
     font-family: shadowsintolight-regular;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    letter-spacing:1px;
+    font-weight:500;
+    position: relative;
 }
-/* Media query para pantallas pequeñas (menos de 576px) */
+
+.p-personalizado::before {
+    content: "";
+    position: absolute;
+    top: 210px;
+    left: 28%;
+    width: 40%;
+    height: 5px;
+    background-color: rgb(200, 235, 52);
+}
+
+div.card_custom {
+    margin-top: 3rem;
+    position: relative;
+    display: flex;
+    align-items:baseline;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    box-shadow: 5px 8px 15px 1px rgba(0, 0, 0, 0.2);
+    color: rgb(242, 237, 237);
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+div.card-body h5 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: rgb(225, 252, 108);
+}
+
+p.desc_custom_proj {
+    font-size: 1.1rem;
+}
+
+div#project1 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('../Myphoto/weather-2.jpeg');
+
+}
+
+div#project2 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('../Myphoto/type-test.jpeg');
+}
+
+div#project3 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('../Myphoto/sensive.jpg');
+}
+
+div#project4 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('../Myphoto/psicology.jpeg');
+}
+
+div#project5 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('../Myphoto/care-solutions.png');
+}
+
+div.btns_custom{
+    color:wheat;
+}
+
+a.btn_custom {
+    border: 1px solid grey;
+    transition: .2s;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 3px 5px 5px 1px rgba(0,0,0,0.2);
+    padding: 3px 10px;
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+}
+
+a.btn_custom:hover{
+    background-color: white;
+    color:black;
+    border: 1px solid white;
+}
+/* Media query */
 @media (max-width: 575.98px) {
     .row-cols-1 > .col {
-        flex: 0 0 100%; /* Una tarjeta por fila en pantallas pequeñas */
-    }
+    flex: 0 0 100%; 
+}
 }
 
-/* Media query para pantallas medianas (576px - 991px) */
 @media (min-width: 576px) and (max-width: 991.98px) {
     .row-cols-1 > .col {
-        flex: 0 0 100%; /* Una tarjeta por fila en pantallas medianas */
+        flex: 0 0 100%; 
     }
 }
 
-/* Media query para pantallas grandes (992px y superiores) */
 @media (min-width: 992px) {
     .row-cols-1 > .col {
-        flex: 0 0 50%; /* Dos tarjetas por fila en pantallas grandes */
+        flex: 0 0 50%; 
+    }
+
+    .p-personalizado::before {
+        top: 180px;
     }
 }

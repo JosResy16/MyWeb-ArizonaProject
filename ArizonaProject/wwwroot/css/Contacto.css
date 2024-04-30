@@ -1,2 +1,67 @@
-﻿body {
+﻿@font-face {
+    font-family: 'quicksand-regular';
+    src: url('../lib/bootstrap/fonts/quicksand-regular.ttf') format('truetype');
+}
+
+body {
+    font-family: quicksand-regular;
+    padding-bottom: 1rem;
+    background: rgb(136,163,237);
+    background: linear-gradient(0deg, rgba(136,163,237,0.9961497134670487) 0%, rgba(197,173,197,1) 100%);
+}
+
+.container-section {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+div.banner_contacto {
+    background-color: rgb(246, 246, 246);
+    max-width: 900px;
+    border-radius: 5px;
+    box-shadow: 5px 10px 15px 2px rgba(0, 0, 0, 0.2);
+    color: black;
+    padding: 2rem 2rem;
+    text-align: center;
+    font-size:1.2rem;
+}
+
+div.banner_contacto p.text_contacto {
+    position: relative; 
+    display: inline-block; 
+    padding: 0.2em 0;
+}
+
+div.banner_contacto p.text_contacto::before{
+    content: "";
+    position: absolute; 
+    top: 80px;
+    left: 40%; 
+    width: 20%; 
+    height: 5px;
+    background-color: rgb(203, 49, 49);
+}
+
+.redes{
+    margin-top: 2rem;
+}
+
+#copy_alert {
+    display: none;
+}
+
+.redes div a{
+    text-decoration:none;
+    color: black;
+    display:block;
+    margin-bottom: 10px;
+}
+
+#copy_icon{
+    border: none;
+    background-color: white;
+    color: rgb(154, 150, 150);
+    font-size: .8rem;
 }

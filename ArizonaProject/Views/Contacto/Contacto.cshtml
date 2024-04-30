@@ -1,9 +1,61 @@
-﻿<!DOCTYPE html>
+﻿@{
+    string email = "josreyes865@gmail.com";
+    string phone = "+52 871 413 0634";
+}
+
+<!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="~/css/Contacto.css" />
+    <link href="~/css/Contacto.css" rel="stylesheet" />
 </head>
 <body>
-    
+    <div class="container">
+
+        <section class="container-section">
+            <div class="banner_contacto">
+                <p class="text_contacto">Estoy emocionado de conectar contigo. Si tienes preguntas, propuestas de trabajo o simplemente quieres saludar, no dudes en escribirme. </p>
+                <div class="redes">
+                    <div>
+                        <i class="bi bi-envelope"></i> <span id="copy_alert" style="color:mediumseagreen; font-size: .8rem;">copiado!</span>
+                        <div style="display:flex; justify-content: center; align-items:baseline; gap:8px">
+                            <p>@email</p><button id="copy_icon" data-clipboard-text="@email"> <i class="bi bi-copy"></i></button>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="bi bi-telephone"></i>
+                        <p>@phone</p>
+                    </div>
+                    <div>
+                        <i class="bi bi-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/josreyes865/">José Luis Reyes</a>
+                    </div>
+                    <div>
+                        <i class="bi bi-github"></i>
+                        <a href="https://github.com/JosResy16">josresy16</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var copyButton = document.getElementById('copy_icon');
+            var clipboard = new ClipboardJS(copyButton);
+
+            clipboard.on('success', function (e) {
+                console.log('copy');
+
+                var copyFeedback = document.getElementById('copy_alert');
+                copyFeedback.style.display = 'block';
+
+                setTimeout(function () {
+                    copyFeedback.style.display = 'none';
+                }, 2000);
+            });
+        });
+    </script>
 </body>
 </html>
+
