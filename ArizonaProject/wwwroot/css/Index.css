@@ -52,6 +52,7 @@ a{
     border-radius: 50%;
     background-image: url('../myphoto/try.png');
     background-size: cover;
+    box-shadow: 5px 8px 10px 2px rgba(0, 0, 0, 0.3);
 }
 
 .banner-rigthSide {
@@ -117,14 +118,17 @@ a.btn-banner {
     box-shadow: 5px 10px 15px 2px rgba(0, 0, 0, 0.2);
 }
 
-.carrusel-custom{
+div.carrusel-custom{
     display: flex;
-    justify-content:space-between;
+    justify-content:center;
 }
 
-.carrusel-img-custom{
-
+div.carrusel-custom div.col-md-4.col-lg-4.inner_div{
+    display:flex;
+    align-items:center;
+    justify-content: center;
 }
+
 
 .carousel-inner img {
     width: 150px;

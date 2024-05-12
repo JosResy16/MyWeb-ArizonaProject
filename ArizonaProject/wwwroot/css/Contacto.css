@@ -31,15 +31,15 @@ div.banner_contacto {
 div.banner_contacto p.text_contacto {
     position: relative; 
     display: inline-block; 
-    padding: 0.2em 0;
+    padding: 0.2rem 0 1rem;
 }
 
 div.banner_contacto p.text_contacto::before{
     content: "";
     position: absolute; 
-    top: 80px;
-    left: 40%; 
-    width: 20%; 
+    bottom: 0;
+    left: 28%; 
+    width: 40%; 
     height: 5px;
     background-color: rgb(203, 49, 49);
 }
